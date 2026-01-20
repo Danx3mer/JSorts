@@ -1,11 +1,10 @@
 public class Sorter {
     /**
      * Time /Space Complexity: O(n^2) / O(1)
-     * @param elements The array ofelements to be sorted.
-     * @return The sorted array of elements
+     * @param elements The array to be sorted.
      */
-    static public int[] bubbleSort(int[] elements) {
-        int[] result = elements.clone();
+    static public void bubbleSort(int[] elements) {
+        int[] result = elements;
         boolean swapped = false;
         int passes = 0;
 
@@ -21,6 +20,30 @@ public class Sorter {
             }
 
         } while(swapped && passes <= elements.length - 1);
-        return result;
     }
+
+    /**
+     * Time / Space Complexity: O() / O()
+     * @param elements The array to be sorted.
+    */
+    static public void insertionSort(int[] elements) {  
+
+    } 
+    
+    /**
+     * Time / Space Complexity: O(n^2) / O(1)
+     * @param elements The array to be sorted.
+    */
+    static public void selectionSort(int[] elements) { 
+        for(int iterBack = elements.length-1; iterBack >=0; iterBack--) {
+            for(int iterFront = 0; iterFront < iterBack; iterFront++) {
+                if(elements[iterBack] < elements[iterFront]) {
+                    int temp = elements[iterFront];
+                    elements[iterFront] = elements[iterBack];
+                    elements[iterBack] = temp;
+                }
+            }
+        }
+    } 
 }
+
