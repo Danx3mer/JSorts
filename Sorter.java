@@ -27,7 +27,16 @@ public class Sorter {
      * @param elements The array to be sorted.
     */
     static public void insertionSort(int[] elements) {  
+        for(int iter=1; iter<elements.length; iter++) {
+            int toInsert = iter-1;
+            int key = elements[iter];
 
+            while(toInsert >= 0 && elements[toInsert] > key) {
+                elements[toInsert + 1] = elements[toInsert];
+                toInsert--; 
+            }
+            elements[toInsert + 1] = key;
+        }
     } 
     
     /**

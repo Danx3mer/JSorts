@@ -15,7 +15,7 @@ public class Main{
             }
             break;
             case "insertion": {
-                // Sorter.insertionSort(elements);
+                Sorter.insertionSort(elements);
             }   
             break;
             case "selection": {
