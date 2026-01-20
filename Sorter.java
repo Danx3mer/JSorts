@@ -23,7 +23,7 @@ public class Sorter {
     }
 
     /**
-     * Time / Space Complexity: O() / O()
+     * Time / Space Complexity: O(n^2) / O(1)
      * @param elements The array to be sorted.
     */
     static public void insertionSort(int[] elements) {  
