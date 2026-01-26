@@ -22,8 +22,10 @@ public class Main{
                 Sorter.selectionSort(elements);
             }
             break; 
-            default:
+            default: {
                 System.out.println("Please enter a valid sort type! Either bubble, insertion, or selection!");
+                return;
+            }
         }
 
         System.out.println(Arrays.equals(elements, actual));       
