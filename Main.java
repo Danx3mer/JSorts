@@ -4,12 +4,12 @@ public class Main{
         public static void main(String[] args) {
         int sizeOf = Integer.parseInt(args[0]);
 
-        int[] elements = randArr(sizeOf);
+        int[] elements = (args[1].toLowerCase().equals("sorted")) ? sortedArr(sizeOf) : randArr(sizeOf);
 
         int[] actual = elements.clone();
         Arrays.sort(actual);
 
-        switch(args[1].toLowerCase()) {
+        switch(args[2].toLowerCase()) {
             case "bubble": {
                 Sorter.bubbleSort(elements);
             }
@@ -36,6 +36,16 @@ public class Main{
             arr[iter] = (int) (Math.random() * 1000000000);
         }
 
+        return arr;
+    }
+
+    public static int[] sortedArr(int size) {
+        int arr[] = new int[size];
+
+        for(int iter=0; iter<size; iter++) {
+            arr[iter] = iter;
+        }
+        
         return arr;
     }
 }
